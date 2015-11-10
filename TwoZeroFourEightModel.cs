@@ -37,6 +37,19 @@ namespace twozerofoureight
             NotifyAll();
         }
 
+        public int getSum()
+        {
+            int sum = 0;
+                for(int i = 0; i < 4; i++)
+                {
+                    for(int j = 0; j < 4; j++)
+                    {
+                        sum = sum + board[i, j];
+                    }
+                }
+                return sum;
+        }
+
         private int[,] Random(int[,] input)
         {
             while (true)
