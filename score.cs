@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace twozerofoureight
 {
-    public partial class score : Form
+    public partial class score : Form, View
     {
         public score()
         {
@@ -19,6 +19,10 @@ namespace twozerofoureight
         public void Score(int s_new)
         {
             lblscore.Text = Convert.ToString(s_new);
+        }
+        public void Notify(Model m)
+        {
+            Score(((TwoZeroFourEightModel)m).getSum());
         }
     }
 }
